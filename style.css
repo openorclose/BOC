@@ -16,7 +16,7 @@ label {
     display: table-row;
 }
 input:not([type=checkbox]), select {
-    margin: 10px 0 10px 0;
+    margin: 12px 0 10px 0;
     display: block;
     width: 90%;
 }
