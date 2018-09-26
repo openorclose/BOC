@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<form>
+    <label for = "fromSelect">From:
+        <select id = "fromSelect">
+        <option>Current</option>
+        <option>Savings</option>
+        </select>
+    </label>
+
+    <label>To: </label>
+
+    <table id = "payeesTable" style = "border: 1px solid black;">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Bank</th>
+            <th>Type</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr id = "filters" style = "display: none">
+            <td colspan="3">
+            <input type = "text" placeholder="Name" size = "8">
+            <input type = "text" placeholder="Bank" size = "8">
+            <label for="typeSelect">Type
+                <select id = "typeSelect">
+                    <option>Local Bank Transfer</option>
+                    <option>Other BOC Transfer</option>
+                    <option>International Transfer</option>
+                </select>
+            </label>
+            </td>
+        </tr>
+        <tr class = "top">
+            <td colspan="3"><span id = "newPayeeButton">+ New Payee</span>
+            <div id = "newPayeeForm" style = "display: none; border: 1px solid black;">
+                <label class = "all" for="newType">Type
+                    <select id = "newType">
+                        <option value = "local">Local Bank Transfer</option>
+                        <option value = "otherboc">Other BOC Transfer</option>
+                        <option value = "international">International Transfer</option>
+                    </select>
+                </label>
+                <label class = "international " for = "swiftInput">SWIFT Code: <input id = "swiftInput" type = "text"></label>
+                <label class = "international" for = "clearingCodeInput">Clearing Code: <input id = "clearingCodeInput" type = "text"></label>
+                <label class = "all" for = "nameInput">Name: <input id = "nameInput" type = "text"></label>
+                <label class = "local international" for = "bankInput">Bank: <input id = "bankInput" type = "text"></label>
+                <label class = "all" for = "accountNumberInput">Account Number: <input id = "accountNumberInput" type = "text"></label>
+            </div>
+            </td>
+        </tr>
+        <tr class = "top">
+            <td>Name1</td>
+            <td>Bank1</td>
+            <td>Type1</td>
+        </tr>
+        <tr class = "top">
+            <td>Name2</td>
+            <td>Bank2</td>
+            <td>Type2</td>
+        </tr>
+        <tr class = "top">
+            <td>Name3</td>
+            <td>Bank3</td>
+            <td>Type3</td>
+        </tr>
+        <tr>
+            <td>Name4</td>
+            <td>Bank4</td>
+            <td>Type4</td>
+        </tr>
+        <tr>
+            <td>Name5</td>
+            <td>Bank5</td>
+            <td>Type5</td>
+        </tr>
+        <tr>
+            <td>Name6</td>
+            <td>Bank6</td>
+            <td>Type6</td>
+        </tr>
+        <tr class = "top">
+            <td id = "moreButton" colspan=3>More...</td>
+        </tr>
+        </tbody>
+    </table>
+    <label for = "amountInput">Amount:<input type = "text" id = "amountInput"></label>
+
+    <label for = "notesInput">Notes:<input type = "text" id = "notesInput"></label>
+    <button>Send</button>
+    <button>Cancel</button>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

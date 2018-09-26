@@ -1,0 +1,9 @@
+label {
+    display: block;
+}
+#payeesTable > tbody > tr {
+    display: none;
+}
+#payeesTable > tbody > tr.top {
+    display: table-row;
+}
