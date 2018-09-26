@@ -6,7 +6,7 @@ label {
 }
 #payeesTable {
     border: 1px solid black;
-    width: 90%;
+    width: 85%;
     margin: 10px;
 }
 #payeesTable > tbody > tr {
@@ -18,7 +18,7 @@ label {
 input:not([type=checkbox]), select {
     margin: 12px 0 10px 0;
     display: block;
-    width: 90%;
+    width: 85%;
 }
 form {
     width: 800px;
