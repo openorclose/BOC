@@ -17,7 +17,7 @@ label {
     width: 90%;
     margin: 15px;
     background-color: #eaebeb;
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 10px;
     border-collapse: collapse;
 }
@@ -29,6 +29,11 @@ td {
 }
 #payeesTable > tbody > tr {
     display: none;
+    border: solid;
+    border-width: 1px 0;
+}
+table tr:hover {
+    background: #969696;
     border: solid;
     border-width: 1px 0;
 }
@@ -70,9 +75,7 @@ form {
     padding: 0;
     color: white;
 }
-table tr:hover {
-    background: #969696;
-}
+
 #payout {
     margin-top: 15px;
     margin-left: 10px;
@@ -97,4 +100,16 @@ table tr:hover {
     width: 35%;
     display: inline;
     margin-left: 20px;
+}
+button {
+    background-color: #d98992;
+    border-radius: 15px;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 130%;
+    font-weight: bolder;
+    margin: 20px auto auto;
+    width: 80%;
 }

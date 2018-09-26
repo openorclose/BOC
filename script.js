@@ -10,7 +10,7 @@ d.id("newPayeeBox").addEventListener("change", e => {
 
 });
 d.qa("#payeesTable tr").forEach(e => e.addEventListener("click", function() {
-    if (this.nodeName.toLowerCase() === "tr") {
+    if (this.nodeName.toLowerCase() === "tr" && !this.innerText.includes("More")) {
         d.qa("#payeesTable tr").forEach(e => (e.style.backgroundColor = "#ececec"));
         this.style.backgroundColor = "#969696";
     }
