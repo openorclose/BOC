@@ -9,6 +9,12 @@ d.id("newPayeeBox").addEventListener("change", e => {
     d.id("searchInput").style.display = d.id("payeesTable").style.display = enabled ? "none" : "block";
 
 });
+d.qa("#payeesTable tr").forEach(e => e.addEventListener("click", function() {
+    if (this.nodeName.toLowerCase() === "tr") {
+        d.qa("#payeesTable tr").forEach(e => (e.style.backgroundColor = "#ececec"));
+        this.style.backgroundColor = "#969696";
+    }
+}));
 d.id("moreButton").addEventListener("click", () => {
     d.qa("#payeesTable > tbody > tr:not(.top)").forEach(e => e.style.display = e.style.display === "table-row" ? "none" : "table-row");
 });

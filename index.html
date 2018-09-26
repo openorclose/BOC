@@ -9,13 +9,13 @@
 </head>
 <body>
 <form>
-    <label for = "fromSelect">From:
+    <label for = "fromSelect">From
         <select id = "fromSelect">
         <option>Current</option>
         <option>Savings</option>
         </select>
     </label>
-    <div id = "searchDiv"><label style = "margin-left: 0">To:</label>
+    <div id = "searchDiv"><label style = "margin-left: 0">To</label>
         <div>
             <label for = "newPayeeBox">New Payee<input type = "checkbox" id = "newPayeeBox"></label>
             <div id = "newPayeeForm" style = "display: none;">
@@ -48,9 +48,9 @@
             <td>BOC</td>
         </tr>
         <tr class = "top">
-            <td>Name3</td>
-            <td>Bank3</td>
-            <td>Type3</td>
+            <td>Over Seas</td>
+            <td>1234-56789-9</td>
+            <td>BOA</td>
         </tr>
         <tr>
             <td>Name4</td>
@@ -72,9 +72,19 @@
         </tr>
         </tbody>
     </table>
-    <label for = "amountInput">Amount:<input type = "number" id = "amountInput"></label>
-    <label for = "whenInput">When:<input type = "datetime-local" id = "whenInput"></label>
-    <label for = "notesInput">Notes:<input type = "text" id = "notesInput"></label>
+    <div id = "amountDiv">
+        <label style = "margin-left: 0; grid-column: 1/2; grid-row: 1/3">Amount</label>
+        <span id = "payout">Pay-out</span>
+        <span id = "payin">Pay-in</span>
+        <div id = "outCurrency">
+            <label for = "inCurrencyInput">SGD<input type = "number" id = "inCurrencyInput"></label>
+        </div>
+        <div id = "inCurrency">
+            <label for = "outCurrencyInput">SGD<input type = "number" id = "outCurrencyInput" disabled></label>
+        </div>
+    </div>
+    <label for = "whenInput">When<input type = "datetime-local" id = "whenInput"></label>
+    <label for = "notesInput">Notes<input type = "text" id = "notesInput"></label>
     <button>Send</button>
     <button>Cancel</button>
 </form>
