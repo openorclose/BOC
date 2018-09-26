@@ -16,49 +16,28 @@
         </select>
     </label>
 
-    <label>To: </label>
-
-    <table id = "payeesTable" style = "border: 1px solid black;">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Account No.</th>
-            <th>Bank</th>
-        </tr>
-
-        </thead>
-        <tbody>
-        <tr id = "filters" style = "display: none">
-            <td colspan="3">
-            <input type = "text" placeholder="Name" size = "8">
-            <input type = "text" placeholder="Bank" size = "8">
-            <label for="typeSelect">Type
-                <select id = "typeSelect">
-                    <option>Local Bank Transfer</option>
-                    <option>Other BOC Transfer</option>
-                    <option>International Transfer</option>
+    <label for = "searchInput">To:
+        <input type = "search" id = "searchInput" placeholder = "Search">
+    </label>
+    <div>
+        <label for = "newPayeeBox">New Payee<input type = "checkbox" id = "newPayeeBox"></label>
+        <div id = "newPayeeForm" style = "display: none;">
+            <label class = "all" for="newType">Type
+                <select id = "newType">
+                    <option value = "local">Local Bank Transfer</option>
+                    <option value = "otherboc">Other BOC Transfer</option>
+                    <option value = "international">International Transfer</option>
                 </select>
             </label>
-            </td>
-        </tr>
-        <tr class = "top">
-            <td colspan="3"><span id = "newPayeeButton">+ New Payee</span>
-            <div id = "newPayeeForm" style = "display: none; border: 1px solid black;">
-                <label class = "all" for="newType">Type
-                    <select id = "newType">
-                        <option value = "local">Local Bank Transfer</option>
-                        <option value = "otherboc">Other BOC Transfer</option>
-                        <option value = "international">International Transfer</option>
-                    </select>
-                </label>
-                <label class = "international " for = "swiftInput">SWIFT Code: <input id = "swiftInput" type = "text"></label>
-                <label class = "international" for = "clearingCodeInput">Clearing Code: <input id = "clearingCodeInput" type = "text"></label>
-                <label class = "all" for = "nameInput">Name: <input id = "nameInput" type = "text"></label>
-                <label class = "local international" for = "bankInput">Bank: <input id = "bankInput" type = "text"></label>
-                <label class = "all" for = "accountNumberInput">Account Number: <input id = "accountNumberInput" type = "text"></label>
-            </div>
-            </td>
-        </tr>
+            <label class = "international " for = "swiftInput">SWIFT Code: <input id = "swiftInput" type = "text"></label>
+            <label class = "international" for = "clearingCodeInput">Clearing Code: <input id = "clearingCodeInput" type = "text"></label>
+            <label class = "all" for = "nameInput">Name: <input id = "nameInput" type = "text"></label>
+            <label class = "local international" for = "bankInput">Bank: <input id = "bankInput" type = "text"></label>
+            <label class = "all" for = "accountNumberInput">Account Number: <input id = "accountNumberInput" type = "text"></label>
+        </div>
+    </div>
+    <table id = "payeesTable" >
+        <tbody>
         <tr class = "top">
             <td>Ali Baba</td>
             <td>254-00000-8</td>
@@ -94,8 +73,8 @@
         </tr>
         </tbody>
     </table>
-    <label for = "amountInput">Amount:<input type = "text" id = "amountInput"></label>
-
+    <label for = "amountInput">Amount:<input type = "number" id = "amountInput"></label>
+    <label for = "whenInput">When:<input type = "datetime-local" id = "whenInput"></label>
     <label for = "notesInput">Notes:<input type = "text" id = "notesInput"></label>
     <button>Send</button>
     <button>Cancel</button>

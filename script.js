@@ -3,11 +3,14 @@ const d = {
     q: document.querySelector.bind(document),
     qa: document.querySelectorAll.bind(document)
 };
-d.id("newPayeeButton").addEventListener("click", () => {
-    d.id("newPayeeForm").style.display = d.id("newPayeeForm").style.display === "block" ? "none" : "block";
+d.id("newPayeeBox").addEventListener("change", e => {
+    const enabled = e.target.checked;
+    d.id("newPayeeForm").style.display = enabled ? "block" : "none";
+    d.id("payeesTable").style.display = enabled ? "none" : "block";
+
 });
 d.id("moreButton").addEventListener("click", () => {
-    d.qa("#payeesTable > tbody > tr:not(.top), #filters").forEach(e => e.style.display = e.style.display === "table-row" ? "none" : "table-row");
+    d.qa("#payeesTable > tbody > tr:not(.top)").forEach(e => e.style.display = e.style.display === "table-row" ? "none" : "table-row");
 });
 d.id("newType").addEventListener("change", e => showNeededNewPayeeDetails(e.target.value));
 function showNeededNewPayeeDetails(type = "all") {

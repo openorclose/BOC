@@ -1,9 +1,31 @@
 label {
+    margin-left: 10px;
+    margin-right: 10px;
     display: block;
+    width: 100%;
+}
+#payeesTable {
+    border: 1px solid black;
+    width: 90%;
+    margin: 10px;
 }
 #payeesTable > tbody > tr {
     display: none;
 }
 #payeesTable > tbody > tr.top {
     display: table-row;
+}
+input:not([type=checkbox]), select {
+    margin: 10px 0 10px 0;
+    display: block;
+    width: 90%;
+}
+form {
+    width: 800px;
+}
+
+@media only screen and (max-width: 800px) {
+    form {
+        width: 100%;
+    }
 }
