@@ -6,7 +6,7 @@ const d = {
 d.id("newPayeeBox").addEventListener("change", e => {
     const enabled = e.target.checked;
     d.id("newPayeeForm").style.display = enabled ? "block" : "none";
-    d.id("payeesTable").style.display = enabled ? "none" : "block";
+    d.id("searchInput").style.display = d.id("payeesTable").style.display = enabled ? "none" : "block";
 
 });
 d.id("moreButton").addEventListener("click", () => {

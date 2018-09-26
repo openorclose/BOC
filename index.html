@@ -15,26 +15,25 @@
         <option>Savings</option>
         </select>
     </label>
-
-    <label for = "searchInput">To:
-        <input type = "search" id = "searchInput" placeholder = "Search">
-    </label>
-    <div>
-        <label for = "newPayeeBox">New Payee<input type = "checkbox" id = "newPayeeBox"></label>
-        <div id = "newPayeeForm" style = "display: none;">
-            <label class = "all" for="newType">Type
-                <select id = "newType">
-                    <option value = "local">Local Bank Transfer</option>
-                    <option value = "otherboc">Other BOC Transfer</option>
-                    <option value = "international">International Transfer</option>
-                </select>
-            </label>
-            <label class = "international " for = "swiftInput">SWIFT Code: <input id = "swiftInput" type = "text"></label>
-            <label class = "international" for = "clearingCodeInput">Clearing Code: <input id = "clearingCodeInput" type = "text"></label>
-            <label class = "all" for = "nameInput">Name: <input id = "nameInput" type = "text"></label>
-            <label class = "local international" for = "bankInput">Bank: <input id = "bankInput" type = "text"></label>
-            <label class = "all" for = "accountNumberInput">Account Number: <input id = "accountNumberInput" type = "text"></label>
+    <div id = "searchDiv"><label style = "margin-left: 0">To:</label>
+        <div>
+            <label for = "newPayeeBox">New Payee<input type = "checkbox" id = "newPayeeBox"></label>
+            <div id = "newPayeeForm" style = "display: none;">
+                <label class = "all" for="newType">Type
+                    <select id = "newType">
+                        <option value = "local">Local Bank Transfer</option>
+                        <option value = "otherboc">Other BOC Transfer</option>
+                        <option value = "international">International Transfer</option>
+                    </select>
+                </label>
+                <label class = "international " for = "swiftInput">SWIFT Code: <input id = "swiftInput" type = "text"></label>
+                <label class = "international" for = "clearingCodeInput">Clearing Code: <input id = "clearingCodeInput" type = "text"></label>
+                <label class = "all" for = "nameInput">Name: <input id = "nameInput" type = "text"></label>
+                <label class = "local international" for = "bankInput">Bank: <input id = "bankInput" type = "text"></label>
+                <label class = "all" for = "accountNumberInput">Account Number: <input id = "accountNumberInput" type = "text"></label>
+            </div>
         </div>
+        <input type = "search" id = "searchInput" placeholder = "Search">
     </div>
     <table id = "payeesTable" >
         <tbody>
